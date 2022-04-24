@@ -1,0 +1,80 @@
+[
+  {
+    "id": "bef846a6-5eb9-4fd1-a8c3-3d38182595a5",
+    "data": [
+      {
+        "text": "Not on the list",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "18438095-6e94-4f7c-8e8c-1ac7bc8bcfec",
+    "data": [
+      {
+        "text": "I got no clue",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "767a6b33-009e-4edf-bb2d-8c1ed61e9571",
+    "data": [
+      {
+        "text": "I\u0027m not sure",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "4046379f-cd47-4ab4-a1cd-8d55f034d594",
+    "data": [
+      {
+        "text": "I have no idea",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "70344422-1669-484f-a7bb-5e9f07146056",
+    "data": [
+      {
+        "text": "I don\u0027t know",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "a1620e31-9a41-4de7-99c2-87bc9ac2bb99",
+    "data": [
+      {
+        "text": "not sure",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]
