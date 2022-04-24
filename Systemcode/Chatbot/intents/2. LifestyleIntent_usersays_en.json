@@ -1,0 +1,28 @@
+[
+  {
+    "id": "4dc9cb73-3929-4ae7-9529-843d3b09f3a8",
+    "data": [
+      {
+        "text": "Lifestyle",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "a41d57a9-65c2-4553-a6f6-2a2df733fd96",
+    "data": [
+      {
+        "text": "Lifestyle Essentials",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

@@ -1,0 +1,83 @@
+{
+  "id": "06646a96-c268-44e7-a4e7-18d12dd33060",
+  "name": "2. FoodIntent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "What type of food are you sending?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "richContent": [
+              [
+                {
+                  "options": [
+                    {
+                      "text": "Vegetables"
+                    },
+                    {
+                      "text": "Fruits"
+                    },
+                    {
+                      "text": "Canned Foods"
+                    },
+                    {
+                      "text": "Hampers"
+                    },
+                    {
+                      "text": "Openers"
+                    },
+                    {
+                      "text": "Groceries"
+                    },
+                    {
+                      "text": "Drinks"
+                    },
+                    {
+                      "text": "Grains and Cereals"
+                    },
+                    {
+                      "text": "Rice and pasta"
+                    },
+                    {
+                      "text": "Cooking oil"
+                    }
+                  ],
+                  "type": "chips"
+                }
+              ]
+            ]
+          },
+          "textToSpeech": "",
+          "lang": "en",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

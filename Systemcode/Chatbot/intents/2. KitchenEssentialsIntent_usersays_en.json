@@ -1,0 +1,28 @@
+[
+  {
+    "id": "1424f584-9be5-4aa0-a257-7a8cfc85b8a4",
+    "data": [
+      {
+        "text": "Kitchen",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "036f6b3c-f464-4e10-b971-f73230856789",
+    "data": [
+      {
+        "text": "Kitchen Essentials",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

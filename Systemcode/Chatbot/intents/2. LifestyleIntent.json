@@ -1,0 +1,86 @@
+{
+  "id": "fd0afaed-ce86-4bcf-ae6c-829264d734e9",
+  "name": "2. LifestyleIntent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "What type of Lifestyle Essentials are you sending?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "richContent": [
+              [
+                {
+                  "type": "chips",
+                  "options": [
+                    {
+                      "text": "Wrist Watches"
+                    },
+                    {
+                      "text": "Belts"
+                    },
+                    {
+                      "text": "Jewellery and Accessories"
+                    },
+                    {
+                      "text": "Boots"
+                    },
+                    {
+                      "text": "Sneakers amd shoes"
+                    },
+                    {
+                      "text": "Perfumes and sprays"
+                    },
+                    {
+                      "text": "Handbags"
+                    },
+                    {
+                      "text": "Backpacks"
+                    },
+                    {
+                      "text": "Vacuum Cleaner"
+                    },
+                    {
+                      "text": "Purses and Wallets"
+                    },
+                    {
+                      "text": "Sunglasses and Spectacles"
+                    }
+                  ]
+                }
+              ]
+            ]
+          },
+          "textToSpeech": "",
+          "lang": "en",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

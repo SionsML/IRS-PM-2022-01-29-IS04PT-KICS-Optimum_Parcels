@@ -1,0 +1,28 @@
+[
+  {
+    "id": "a070d834-6e4d-487e-a1b1-76887d2a0e50",
+    "data": [
+      {
+        "text": "Tooth Paste",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "06a95be9-177a-4f78-b28a-eb32765ea9e5",
+    "data": [
+      {
+        "text": "tooth_paste",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

@@ -1,0 +1,28 @@
+[
+  {
+    "id": "6417e6e8-6bc9-4da2-987c-6f484a018891",
+    "data": [
+      {
+        "text": "Clothes",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "48d4b0ea-af62-4b44-8b01-5b77ecac61bc",
+    "data": [
+      {
+        "text": "Clothing",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

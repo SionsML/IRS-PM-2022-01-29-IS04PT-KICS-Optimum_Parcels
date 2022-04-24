@@ -1,0 +1,110 @@
+{
+  "id": "4028ddeb-f3e6-4f41-9737-272151ca06c7",
+  "name": "PackageIntent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "package",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "703a1a0d-7b61-43b9-8b38-15f1bd389099",
+          "name": "item",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$item",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "What do you want to send?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "334091bf-e492-4f4a-bf0c-8fe6ec35b0b8",
+          "name": "quantity",
+          "required": true,
+          "dataType": "@sys.number",
+          "value": "$quantity",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "How many?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "What would you like to send?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "richContent": [
+              [
+                {
+                  "type": "chips",
+                  "options": [
+                    {
+                      "text": "Document"
+                    },
+                    {
+                      "text": "Clothing"
+                    },
+                    {
+                      "text": "Electronics"
+                    },
+                    {
+                      "text": "Toys"
+                    },
+                    {
+                      "text": "Cosmetics"
+                    },
+                    {
+                      "text": "Others"
+                    }
+                  ]
+                }
+              ]
+            ]
+          },
+          "textToSpeech": "",
+          "lang": "en",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

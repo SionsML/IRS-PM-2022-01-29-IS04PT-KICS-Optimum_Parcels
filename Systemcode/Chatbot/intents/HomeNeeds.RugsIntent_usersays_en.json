@@ -1,0 +1,28 @@
+[
+  {
+    "id": "d571f85e-7b85-4d87-bfa7-1f9edc39c1d9",
+    "data": [
+      {
+        "text": "rug",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "ae7da7d5-79d9-44e0-9c41-fd88b4d937f8",
+    "data": [
+      {
+        "text": "rugs",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

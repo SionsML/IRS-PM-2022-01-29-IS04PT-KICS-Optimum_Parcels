@@ -1,0 +1,84 @@
+[
+  {
+    "id": "a36a4c6a-993c-4624-bdc9-ff6a2a65c813",
+    "data": [
+      {
+        "text": "8",
+        "meta": "@sys.number",
+        "alias": "quantity",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "2a633be6-b704-4489-a135-689fb6ee5b04",
+    "data": [
+      {
+        "text": "10",
+        "meta": "@sys.number",
+        "alias": "quantity",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "4039d6cf-e480-44e2-b98d-a6a3e95bf841",
+    "data": [
+      {
+        "text": "hand phone",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "d4226d14-adba-4213-aca6-9b708f7da8b9",
+    "data": [
+      {
+        "text": "cell phones",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "a4f81445-e6a1-48f6-b352-46d2a6c8eed2",
+    "data": [
+      {
+        "text": "mobile phones",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "e8168d7c-976e-4765-ac64-7c04208a0fe2",
+    "data": [
+      {
+        "text": "phone",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

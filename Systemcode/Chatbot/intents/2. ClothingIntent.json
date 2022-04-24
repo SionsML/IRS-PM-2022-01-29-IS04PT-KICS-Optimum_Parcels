@@ -1,0 +1,83 @@
+{
+  "id": "797a9e31-a16b-4dce-aacd-3d4078ca3c72",
+  "name": "2. ClothingIntent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "What type of clothing are you sending?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "richContent": [
+              [
+                {
+                  "options": [
+                    {
+                      "text": "T-shirts"
+                    },
+                    {
+                      "text": "Dress"
+                    },
+                    {
+                      "text": "Winter Wear"
+                    },
+                    {
+                      "text": "Swim Wear"
+                    },
+                    {
+                      "text": "Athlete Clothes"
+                    },
+                    {
+                      "text": "Coats and Jackets"
+                    },
+                    {
+                      "text": "Costumes"
+                    },
+                    {
+                      "text": "Baby wear"
+                    },
+                    {
+                      "text": "Scarves and Ties"
+                    },
+                    {
+                      "text": "Cap and hats"
+                    }
+                  ],
+                  "type": "chips"
+                }
+              ]
+            ]
+          },
+          "textToSpeech": "",
+          "lang": "en",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

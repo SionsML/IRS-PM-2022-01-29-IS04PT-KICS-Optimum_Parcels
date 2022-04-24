@@ -1,0 +1,86 @@
+{
+  "id": "a958ea8e-673e-4fcf-91d8-9801c44027e3",
+  "name": "2. ElectronicsIntent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "Phone",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "What type of electrical or electronics would you like to send?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "richContent": [
+              [
+                {
+                  "type": "chips",
+                  "options": [
+                    {
+                      "text": "phones"
+                    },
+                    {
+                      "text": "cameras"
+                    },
+                    {
+                      "text": "TV"
+                    },
+                    {
+                      "text": "iPad"
+                    },
+                    {
+                      "text": "Chargers, Plugs and remote"
+                    },
+                    {
+                      "text": "Laptop"
+                    },
+                    {
+                      "text": "Table top Appliances"
+                    },
+                    {
+                      "text": "Vacuum Cleaner"
+                    },
+                    {
+                      "text": "Video game Console"
+                    },
+                    {
+                      "text": "Lamps and bulbs"
+                    },
+                    {
+                      "text": "Iron box"
+                    }
+                  ]
+                }
+              ]
+            ]
+          },
+          "textToSpeech": "",
+          "lang": "en",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

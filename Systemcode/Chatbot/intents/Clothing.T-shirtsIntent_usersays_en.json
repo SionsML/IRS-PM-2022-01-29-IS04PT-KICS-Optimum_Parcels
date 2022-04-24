@@ -1,0 +1,28 @@
+[
+  {
+    "id": "cce96557-88f8-4424-be35-5811c54ec5ca",
+    "data": [
+      {
+        "text": "t shirt",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "1c1a8118-1303-4c4f-9a3c-5eb2cf4a3239",
+    "data": [
+      {
+        "text": "T-shirts",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

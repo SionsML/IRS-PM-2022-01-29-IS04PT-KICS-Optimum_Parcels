@@ -1,0 +1,83 @@
+{
+  "id": "385e7358-33d6-48f7-9e91-30a4418c047d",
+  "name": "2. DocumentsIntent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "Document",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "What type of documents are you sending?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "richContent": [
+              [
+                {
+                  "type": "chips",
+                  "options": [
+                    {
+                      "text": "Letters"
+                    },
+                    {
+                      "text": "Tickets"
+                    },
+                    {
+                      "text": "Passports"
+                    },
+                    {
+                      "text": "Gift and Reward Cards"
+                    },
+                    {
+                      "text": "Greeting cards"
+                    },
+                    {
+                      "text": "Lecture notes"
+                    },
+                    {
+                      "text": "Journals and Magazines"
+                    },
+                    {
+                      "text": "Books"
+                    },
+                    {
+                      "text": "Legal notices and bills"
+                    },
+                    {
+                      "text": "Cheque book"
+                    }
+                  ]
+                }
+              ]
+            ]
+          },
+          "textToSpeech": "",
+          "lang": "en",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

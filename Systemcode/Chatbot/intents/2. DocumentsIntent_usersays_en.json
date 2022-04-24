@@ -1,0 +1,28 @@
+[
+  {
+    "id": "35292866-648f-4eb2-9e1c-6c78098cda53",
+    "data": [
+      {
+        "text": "Documents",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "7b78a488-8f0a-40df-be67-7441ccdbec47",
+    "data": [
+      {
+        "text": "Document",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

@@ -1,0 +1,86 @@
+{
+  "id": "24a5d5f7-fe15-4557-a56c-6538e81a27fe",
+  "name": "2. EntertainmentIntent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "What type of Entertainment items are you sending?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "richContent": [
+              [
+                {
+                  "type": "chips",
+                  "options": [
+                    {
+                      "text": "Cuddly toys"
+                    },
+                    {
+                      "text": "Board games"
+                    },
+                    {
+                      "text": "Puzzles"
+                    },
+                    {
+                      "text": "Toys"
+                    },
+                    {
+                      "text": "Outdoor games"
+                    },
+                    {
+                      "text": "Sports Equipment"
+                    },
+                    {
+                      "text": "Gardening supplies"
+                    },
+                    {
+                      "text": "Craft items"
+                    },
+                    {
+                      "text": "CDs and DVDs"
+                    },
+                    {
+                      "text": "Souvenirs"
+                    },
+                    {
+                      "text": "Trophy"
+                    }
+                  ]
+                }
+              ]
+            ]
+          },
+          "textToSpeech": "",
+          "lang": "en",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

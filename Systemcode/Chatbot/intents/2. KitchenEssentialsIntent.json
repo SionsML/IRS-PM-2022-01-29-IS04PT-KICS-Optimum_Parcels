@@ -1,0 +1,83 @@
+{
+  "id": "8616c41b-0227-4a8a-b6e4-8b75c843b6a5",
+  "name": "2. KitchenEssentialsIntent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "What type of Kitchen Essentials are you sending?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "richContent": [
+              [
+                {
+                  "options": [
+                    {
+                      "text": "Containers"
+                    },
+                    {
+                      "text": "Cutting board"
+                    },
+                    {
+                      "text": "Cooking utensils"
+                    },
+                    {
+                      "text": "Chopper"
+                    },
+                    {
+                      "text": "Openers"
+                    },
+                    {
+                      "text": "Crockery"
+                    },
+                    {
+                      "text": "Cutlery"
+                    },
+                    {
+                      "text": "Mixing bowl"
+                    },
+                    {
+                      "text": "Baking Accessories"
+                    },
+                    {
+                      "text": "Serving Spoons and ladles"
+                    }
+                  ],
+                  "type": "chips"
+                }
+              ]
+            ]
+          },
+          "textToSpeech": "",
+          "lang": "en",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

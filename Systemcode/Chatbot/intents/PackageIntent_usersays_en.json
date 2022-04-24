@@ -1,0 +1,57 @@
+[
+  {
+    "id": "2af4e26c-fe61-4987-9c90-cbbdba9871f7",
+    "data": [
+      {
+        "text": "I want to send ",
+        "userDefined": false
+      },
+      {
+        "text": "10",
+        "meta": "@sys.number",
+        "alias": "quantity",
+        "userDefined": true
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "t-shirts",
+        "meta": "@sys.any",
+        "alias": "item",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "f5e42e24-a08b-497c-ba5e-804210e888d6",
+    "data": [
+      {
+        "text": "I wand to deliver a parcel",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "85564747-cf89-4089-87d7-3d017503a93c",
+    "data": [
+      {
+        "text": "I want to send a package",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

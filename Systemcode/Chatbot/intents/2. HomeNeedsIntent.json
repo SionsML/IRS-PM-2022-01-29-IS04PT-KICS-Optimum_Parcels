@@ -1,0 +1,83 @@
+{
+  "id": "c9141605-2c5c-47f3-8ab4-003f703472c4",
+  "name": "2. HomeNeedsIntent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "What type of home needs are you sending?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "richContent": [
+              [
+                {
+                  "type": "chips",
+                  "options": [
+                    {
+                      "text": "Curtains"
+                    },
+                    {
+                      "text": "Cushions"
+                    },
+                    {
+                      "text": "Bedlinen"
+                    },
+                    {
+                      "text": "Rugs"
+                    },
+                    {
+                      "text": "Blankets"
+                    },
+                    {
+                      "text": "Artwork and Wall mounts"
+                    },
+                    {
+                      "text": "Picture frames"
+                    },
+                    {
+                      "text": "Sculptures"
+                    },
+                    {
+                      "text": "Pillows"
+                    },
+                    {
+                      "text": "Office supplies"
+                    }
+                  ]
+                }
+              ]
+            ]
+          },
+          "textToSpeech": "",
+          "lang": "en",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

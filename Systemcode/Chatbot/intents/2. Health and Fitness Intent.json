@@ -1,0 +1,83 @@
+{
+  "id": "2f4d4756-38fd-48b5-8fce-f48ddc8787ae",
+  "name": "2. Health and Fitness Intent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "What type of Health and Fitness items are you sending?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "richContent": [
+              [
+                {
+                  "options": [
+                    {
+                      "text": "Medicines and Supplements"
+                    },
+                    {
+                      "text": "First Aid kits"
+                    },
+                    {
+                      "text": "Weighing scale"
+                    },
+                    {
+                      "text": "Sanitising and cleaning liquids"
+                    },
+                    {
+                      "text": "BP and heart rate monitors"
+                    },
+                    {
+                      "text": "Mask boxes"
+                    },
+                    {
+                      "text": "Yoga and tumbling mats"
+                    },
+                    {
+                      "text": "Walking stick"
+                    },
+                    {
+                      "text": "Skipping ropes and resistance bands"
+                    },
+                    {
+                      "text": "Tonic"
+                    }
+                  ],
+                  "type": "chips"
+                }
+              ]
+            ]
+          },
+          "textToSpeech": "",
+          "lang": "en",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

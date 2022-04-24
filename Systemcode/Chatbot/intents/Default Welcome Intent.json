@@ -1,0 +1,92 @@
+{
+  "id": "7cb9ac4d-3537-45fe-bcdd-74b4b9a1e2f3",
+  "name": "Default Welcome Intent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "input.welcome",
+      "affectedContexts": [
+        {
+          "name": "DefaultWelcomeIntent-followup",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "We will help you gauge the size of your package by understanding a few facts from you. To start with, what category of the following would you like to send?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "richContent": [
+              [
+                {
+                  "type": "chips",
+                  "options": [
+                    {
+                      "text": "Documents"
+                    },
+                    {
+                      "text": "Clothing"
+                    },
+                    {
+                      "text": "Electrical and Electronics"
+                    },
+                    {
+                      "text": "Lifestyle Essentials"
+                    },
+                    {
+                      "text": "Home Needs"
+                    },
+                    {
+                      "text": "Toiletries and Personal care"
+                    },
+                    {
+                      "text": "Kitchen Essentials"
+                    },
+                    {
+                      "text": "Food"
+                    },
+                    {
+                      "text": "Health and Fitness"
+                    },
+                    {
+                      "text": "Entertainment"
+                    }
+                  ]
+                }
+              ]
+            ]
+          },
+          "textToSpeech": "",
+          "lang": "en",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "WELCOME"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

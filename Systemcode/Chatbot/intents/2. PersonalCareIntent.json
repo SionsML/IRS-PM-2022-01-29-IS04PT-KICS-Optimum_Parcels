@@ -1,0 +1,83 @@
+{
+  "id": "93d19abd-9102-432f-b843-24c7c5c888a1",
+  "name": "2. PersonalCareIntent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "What type of personal care products are you sending?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "richContent": [
+              [
+                {
+                  "options": [
+                    {
+                      "text": "Shampoo \u0026 Conditioner"
+                    },
+                    {
+                      "text": "Tooth Paste"
+                    },
+                    {
+                      "text": "Cleaning Liquids"
+                    },
+                    {
+                      "text": "Cosmetic Items"
+                    },
+                    {
+                      "text": "Brushes"
+                    },
+                    {
+                      "text": "Shaving razors"
+                    },
+                    {
+                      "text": "Creams and lotions"
+                    },
+                    {
+                      "text": "Sponges and scrub pads"
+                    },
+                    {
+                      "text": "Diapers"
+                    },
+                    {
+                      "text": "Tissue box"
+                    }
+                  ],
+                  "type": "chips"
+                }
+              ]
+            ]
+          },
+          "textToSpeech": "",
+          "lang": "en",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
