@@ -1,0 +1,48 @@
+{% extends "courier/Template_2.html" %}
+
+{% load static %}
+
+{% block title %}
+    Sign In
+{% endblock %}
+
+{% block script %}
+    <script type"text/javascript" src="{% static 'js/login.js' %}"></script>
+{% endblock %}
+
+
+{% block body %}
+
+    <div class="user-box">
+        <div>
+            <center>
+                <img src="{% static 'img/OP_Logo.png' %}" height="120em">
+            </center>
+        </div>
+    
+        <form action="{% url 'login' %}" method="post" id="signin-form">
+            {% csrf_token %}
+            <div class="form-group">
+                <input class="form-control userInputs user_name" type="text" name="username" placeholder="Username">
+            </div>
+            <div class="form-group">
+                <input class="form-control userInputs password" type="password" name="password" placeholder="Password">
+                <span class="message"><small>{{message}}</small></span>
+            </div>
+            <center>
+                <input class="btn btn-secondary" type="submit" value="Log in" disabled>
+            </center>
+        </form>
+    
+        <div>
+            <center>
+                Don't have an account?&nbsp;&nbsp;<a href="{% url 'register' %}">Sign Up</a>
+            </center>
+        </div>
+    </div>
+    
+{% endblock %}
+
+
+
+

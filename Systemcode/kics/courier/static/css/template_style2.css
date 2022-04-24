@@ -1,0 +1,37 @@
+.btn{
+    color: white;
+    border-radius: 999px;
+    width: 95%;
+}
+.message{
+    color: rgb(29, 29, 29);
+}
+.smallLetter{
+    font-size: small;
+}
+.user-box{
+    background-color: #fff;
+    width: 45%;
+    border-radius: 5px;
+    margin-top: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 50px 10px 50px;
+}
+.user-box form > div{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.custom-file-label{
+    overflow: hidden;
+}
+
+.form-control:focus{
+    box-shadow: 0 0 0 0.03rem rgba(0, 0, 0, 0.719);
+    border-color: rgba(12, 12, 12, 0.555);
+}
+.btn, .btn:focus, .btn:active{
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+}

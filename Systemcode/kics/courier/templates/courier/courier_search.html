@@ -1,0 +1,327 @@
+{% extends 'courier/Template_1.html' %}
+
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/search_style.css' %}">
+
+    <script src="{% static 'js/search_courier.js' %}"></script>
+{% endblock %}
+
+{% block body %}
+    <section class="section section1">
+        <div class="query-data-div">
+            <div class="container" style="max-width:90%">
+                <div class="sending-places">
+                    <div class="from-div text-align-left">
+                        <div class="font-label">Origin</div>
+                        <div class="white">{{origin}}</div>
+                    </div>
+                    <div class="sending-type-div white">
+                        <div class="font-label">&nbsp;</div>
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-left-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5zm14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5z"/>
+                            </svg>
+                    </div>
+                    <div class="to-div text-align-right">
+                        <div class="font-label">Destination</div>
+                        <div class="white">{{destination}}</div>
+                    </div>
+                </div>
+                <div class="vertical-line"></div>
+                <div class="sending-time">
+                    <div class="pickup-date-div">
+                        <div class="font-label">Pick Up</div>
+                        <div class="white">
+                           {% if pickUp_date %}
+                              {{pickUp_date|date:"D, d M Y"}}
+                           {% else %}
+                                --
+                           {% endif %}
+                        </div>
+                    </div>
+                    <div class="delivery-date-div">
+                        <div class="font-label">Delivery</div>
+                        <div class="white">
+                            {% if delivery_date %}
+                                {{delivery_date|date:"D, d M Y"}}
+                            {% else %}
+                                --
+                            {% endif %}
+                        </div>
+                    </div>
+                </div><div class="vertical-line"></div>
+
+                <div class="vertical-line"></div>
+                <div class="search-modify">
+                    <form action="/" method="POST">
+                        {% csrf_token %}
+                        <input type="hidden" name="Origin" value="{{origin|upper}}">
+                        <input type="hidden" name="Destination" value="{{destination|upper}}">
+                        <input type="hidden" name="OriginPostcode" value="{{originPostCode}}">
+                        <input type="hidden" name="DestinationPostcode" value="{{destinationPostcode}}">
+                        <input type="hidden" name="PickUpDate" value='{{pickUp_date|date:"Y-m-d"}}'>
+                        <input type="hidden" name="DeliveryDate" value='{{delivery_date|date:"Y-m-d"}}'>
+                        <button class="btn spl-btn" type="submit">Modify Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="query-result-div">
+            <div class="container" style="max-width:90%">
+                <div class="row">
+                    {% if couriers %}
+                        <div class="col-lg-3 filter-div">
+
+                            <div class="filter">
+                                <center>
+                                    <h4>Filter Results</h4>
+                                </center>
+                                <div class="filter-box">
+                                    <div class="filter-price">
+                                        <div class="font-weight-bold">Price</div>
+                                        <div>
+                                            <input type="range" class="form-control-range" min="{{min_price}}" max="{{max_price}}" value="{{max_price}}" oninput="filter_price()">
+                                            <div class="price-range-output">
+                                                <div class="initial-price-range">
+                                                    <span class="currency-symbol">$</span>
+                                                    <span class="initial-price-value">{{courier.price}}</span>
+                                                </div>
+                                                <div class="final-price-range">
+                                                    <span class="currency-symbol">$</span>
+                                                    <span class="final-price-value"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!---->
+                                    <div class="filter-slot insurance-filter-slot-group">
+                                        <div class="font-weight-bold">Insurance</div>
+                                        <div style="display: flex; justify-content: space-between;">
+                                            <div class="square-box" onclick="filter_insurance(this)" data-type="insurance" data-start="0">
+                                                <div class="filter-img-div">
+                                                    <div>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-piggy-bank" viewBox="0 0 16 16">
+                                                            <path d="M5 6.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0zm1.138-1.496A6.613 6.613 0 0 1 7.964 4.5c.666 0 1.303.097 1.893.273a.5.5 0 0 0 .286-.958A7.602 7.602 0 0 0 7.964 3.5c-.734 0-1.441.103-2.102.292a.5.5 0 1 0 .276.962z"/>
+                                                            <path fill-rule="evenodd" d="M7.964 1.527c-2.977 0-5.571 1.704-6.32 4.125h-.55A1 1 0 0 0 .11 6.824l.254 1.46a1.5 1.5 0 0 0 1.478 1.243h.263c.3.513.688.978 1.145 1.382l-.729 2.477a.5.5 0 0 0 .48.641h2a.5.5 0 0 0 .471-.332l.482-1.351c.635.173 1.31.267 2.011.267.707 0 1.388-.095 2.028-.272l.543 1.372a.5.5 0 0 0 .465.316h2a.5.5 0 0 0 .478-.645l-.761-2.506C13.81 9.895 14.5 8.559 14.5 7.069c0-.145-.007-.29-.02-.431.261-.11.508-.266.705-.444.315.306.815.306.815-.417 0 .223-.5.223-.461-.026a.95.95 0 0 0 .09-.255.7.7 0 0 0-.202-.645.58.58 0 0 0-.707-.098.735.735 0 0 0-.375.562c-.024.243.082.48.32.654a2.112 2.112 0 0 1-.259.153c-.534-2.664-3.284-4.595-6.442-4.595zM2.516 6.26c.455-2.066 2.667-3.733 5.448-3.733 3.146 0 5.536 2.114 5.536 4.542 0 1.254-.624 2.41-1.67 3.248a.5.5 0 0 0-.165.535l.66 2.175h-.985l-.59-1.487a.5.5 0 0 0-.629-.288c-.661.23-1.39.359-2.157.359a6.558 6.558 0 0 1-2.157-.359.5.5 0 0 0-.635.304l-.525 1.471h-.979l.633-2.15a.5.5 0 0 0-.17-.534 4.649 4.649 0 0 1-1.284-1.541.5.5 0 0 0-.446-.275h-.56a.5.5 0 0 1-.492-.414l-.254-1.46h.933a.5.5 0 0 0 .488-.393zm12.621-.857a.565.565 0 0 1-.098.21.704.704 0 0 1-.044-.025c-.146-.09-.157-.175-.152-.223a.236.236 0 0 1 .117-.173c.049-.027.08-.021.113.012a.202.202 0 0 1 .064.199z"/>
+                                                        </svg>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    With Insurance
+                                                </div>
+                                            </div>
+                                            <div class="square-box" onclick="filter_insurance(this)" data-type="insurance" data-start="1">
+                                                <div class="filter-img-div">
+                                                    <div>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-piggy-bank-fill" viewBox="0 0 16 16">
+                                                            <path d="M7.964 1.527c-2.977 0-5.571 1.704-6.32 4.125h-.55A1 1 0 0 0 .11 6.824l.254 1.46a1.5 1.5 0 0 0 1.478 1.243h.263c.3.513.688.978 1.145 1.382l-.729 2.477a.5.5 0 0 0 .48.641h2a.5.5 0 0 0 .471-.332l.482-1.351c.635.173 1.31.267 2.011.267.707 0 1.388-.095 2.028-.272l.543 1.372a.5.5 0 0 0 .465.316h2a.5.5 0 0 0 .478-.645l-.761-2.506C13.81 9.895 14.5 8.559 14.5 7.069c0-.145-.007-.29-.02-.431.261-.11.508-.266.705-.444.315.306.815.306.815-.417 0 .223-.5.223-.461-.026a.95.95 0 0 0 .09-.255.7.7 0 0 0-.202-.645.58.58 0 0 0-.707-.098.735.735 0 0 0-.375.562c-.024.243.082.48.32.654a2.112 2.112 0 0 1-.259.153c-.534-2.664-3.284-4.595-6.442-4.595Zm7.173 3.876a.565.565 0 0 1-.098.21.704.704 0 0 1-.044-.025c-.146-.09-.157-.175-.152-.223a.236.236 0 0 1 .117-.173c.049-.027.08-.021.113.012a.202.202 0 0 1 .064.199Zm-8.999-.65a.5.5 0 1 1-.276-.96A7.613 7.613 0 0 1 7.964 3.5c.763 0 1.497.11 2.18.315a.5.5 0 1 1-.287.958A6.602 6.602 0 0 0 7.964 4.5c-.64 0-1.255.09-1.826.254ZM5 6.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"/>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    Without Insurance
+                                                </div>
+                                            </div>
+                                            <div class="square-box" style = "border-style:none">
+                                            </div>
+                                            <div class="square-box" style = "border-style:none">
+                                            </div>
+                                        
+                                        </div>
+                                    </div>
+                                    <div class="filter-slot redelivery-filter-slot-group">
+                                        <div class="font-weight-bold">Home Delivery</div>
+                                        <div style="display: flex; justify-content: space-between;">
+                                            <div class="square-box" onclick="filter_reDelivery(this)" data-type="redelivery" data-start="0">
+                                                <div class="filter-img-div">
+                                                    <div>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-house-heart" viewBox="0 0 16 16">
+                                                            <path fill-rule="evenodd" d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.707L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.646a.5.5 0 0 0 .708-.707L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207l-5-5-5 5V13.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7.207Zm-5-.225C9.664 5.309 13.825 8.236 8 12 2.175 8.236 6.336 5.309 8 6.982Z"/>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    Need Home Delivery
+                                                </div>
+                                            </div>
+                                            <div class="square-box" onclick="filter_reDelivery(this)" data-type="arrival" data-start="1">
+                                                <div class="filter-img-div">
+                                                    <div>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-house-heart-fill" viewBox="0 0 16 16">
+                                                            <path fill-rule="evenodd" d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.707L8 2.207l6.646 6.646a.5.5 0 0 0 .708-.707L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z"/>
+                                                            <path fill-rule="evenodd" d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Zm0 5.189c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.691 0-5.018Z"/>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    No Home Delivery
+                                                </div>
+                                            </div>
+                                            <div class="square-box" style = "border-style:none">
+                                            </div>
+                                            <div class="square-box" style = "border-style:none">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clr-filter-div">
+                                    <center>
+                                        <button class="btn-link">Reset Filters</button>
+                                    </center>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <!-- division for result outcome -->
+                        <div class="col-lg-10 actual-result-div"> 
+
+                            {% if couriers %}
+                            <div class="sort-div">
+
+                                <div style ="width:1%">
+                                     
+                                </div>
+
+                                <div class="courier-columns">
+                                    Sort By:
+                                </div>
+                                
+                                <div style ="width:10%">
+                                     
+                                </div>
+                                <div class="courier-columns">
+                                    Home Delivery
+                                </div>
+                                <div style ="width:1%">
+                                     
+                                </div>
+                                <div class="courier-columns">
+                                    Insurance
+                                </div>
+                                <div style ="width:1%">
+                                     
+                                </div>
+                                <div class="courier-columns">
+                                    Re-delivery
+                                </div>
+                                <div style ="width:1%">
+                                     
+                                </div>
+                                <div class="courier-columns">
+                                    Estimated Delivery
+                                </div>
+                                <div style ="width:1%">
+                                     
+                                </div>
+                                <div class="courier-columns">
+                                    Price
+                                </div>
+                                
+                                <div style ="width:27%">
+                                     
+                                </div>
+
+                            </div>
+                            {% endif %}
+
+                            <div id="outcome_div">
+
+                                {% for estimate in estimatesList %}
+                                    {% for courier in couriers %}
+                                    
+                                        {% if courier.courier|lower == estimate.0|lower %}
+                                            <div class="courier-div-box show">
+                                                <div class="courier-div">
+                                                    <div class="courier-company" style ="max-width:18%">
+                                                        <img src="{{ courier.image.url }}" style="width:90px;height:50px;"/>
+
+                                                        <div class="company-details" >
+                                                            <div class="company-name">{{courier.courier}}</div>
+                                                            <div class="service-name">{{estimate.1}}</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="courier-time">
+                                                        
+                                                        <div class="courier-homeDelivery">
+                                                            <h6>{{estimate.7}}</h6>
+                                                        </div>
+                                                        
+                                                        <div class="courier-insurance">
+                                                            <h6>{{estimate.5}}</h6>
+                                                        </div>
+                                                        
+                                                        
+                                                        <div class="courier-reDelivery">
+                                                            <h6>{{estimate.6}}</h6>
+
+                                                        </div>
+
+                                                        <div class="courier-columns">
+                                                            <h6>{{estimate.3.0}} to {{estimate.3.1}} days </h6>
+
+                                                        </div>
+                                                      
+                                                        <div class="courier-price">
+                                                            <h6>
+                                                                $ 
+                                                                <span style="max-width:2%">
+                                                                    {{estimate.2}}
+                                                                    
+                                                                </span>
+                                                            </h6>
+                                                        </div>
+                                                        <input type="radio" name="radioselect" value="1" {% if forloop.counter == 1 %}checked{% endif %}>
+
+                                                    </div>
+                                                    <div class="courier-details">
+                                                        
+                                                        
+                                                        
+                                                        <div class="courier-details-btn">
+                                                               
+                                                                <!-- <form action="#" method="GET" style="display: flex;"> -->
+                                                                    
+                                                                <button class="btn btn-secondary" type="submit">
+                                                                
+                                                                    Book &#8594;
+                                                                </button>
+                                                                <!-- </form> -->
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+
+                                    {% endfor %}
+                                {% endfor %}
+                                {% if estimatesList %}
+                                {% else %}
+                                    <div style="height: 100%; width:100%; padding: 10%;">
+                                        <div style="text-align: center; margin: auto;">
+                                            <svg width="4em" height="4em" viewBox="0 0 16 16" class="bi bi-exclamation-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                                <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+                                            </svg>
+                                            <br><br>
+                                            <h3>Sorry, no couriers in this search </h3>
+                                            <p>
+                                                Please modify your search criteria and try again.
+                                            </p>
+                                        </div>
+                                    </div>
+                                {% endif %}
+
+                            </div>
+                        </div>
+                    {% else %}
+                        
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        
+    </section>
+{% endblock %}

@@ -1,0 +1,284 @@
+{% extends 'courier/Template_1.html' %}
+
+{% load static %}
+
+{% block head %}
+    <script type="text/javascript" src="{% static 'js/home.js' %}"></script>
+    <script>
+        function chatBotClick() {
+          alert("Please click on EZ Courier-Assistant icon at the bottom right to get assistant for weight, length, width, and height.");
+        }
+
+        function calcTotal() {
+            var length = parseFloat(document.getElementById("parcel-length").value);
+            var width = parseFloat(document.getElementById("parcel-width").value);
+            var height = parseFloat(document.getElementById("parcel-height").value);
+
+            var total = length * width * height / 5000;
+            document.getElementById("parcel-weight").value = total;
+        }
+    </script>
+    <script>
+        let modal;
+        document.addEventListener("click", (e) => {
+        if (e.target.className === "bn632-hover bn21 modal-open") {
+            modal = document.getElementById(e.target.dataset.id);
+            openModal(modal);
+        } else if (e.target.className === "modal-close") {
+            closeModal(modal);
+        } else {
+            return;
+        }
+        });
+
+        const openModal = (modal) => {
+            document.body.style.overflow = "hidden";
+            modal.setAttribute("open", "true");
+            document.addEventListener("keydown", escClose);
+            let overlay = document.createElement("div");
+            overlay.id = "modal-overlay";
+            document.body.appendChild(overlay);
+        };
+
+        const closeModal = (modal) => {
+            document.body.style.overflow = "auto";
+            modal.removeAttribute("open");
+            document.removeEventListener("keydown", escClose);
+            document.body.removeChild(document.getElementById("modal-overlay"));
+        };
+
+        const escClose = (e) => {
+        if (e.keyCode == 27) {
+            closeModal();
+        }
+        };
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $("input[name$='knowsWeight']").click(function() {
+                var num = $(this).val();
+
+                $("div.options").hide();
+                $("#optionButtons" + num).show();
+            });
+        });
+    </script>
+
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger
+        intent="WELCOME"
+        chat-title="EZCourier-Assistant"
+        agent-id="8ffd0f4e-36e5-40fb-9d1d-29dcde59aad8"
+        language-code="en"
+    ></df-messenger>
+    
+{% endblock head %}
+
+{% block body %}
+    <section class="section first-section" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url('{% static 'img/courier_background.jpg'%}');">
+        <div class="banner-div">
+            <div class="banner">
+            <h1 class="banner-text">Search Domestic & International</h1>
+            <h1 class="banner-text">Logistics Companies</h1>
+
+            </div>
+        </div>
+        
+        <div class="search-courier">
+            <div class="container">
+                <div class="input-row">
+                    <label class="form-check-label">
+                        Do you know item's weight and dimension?
+                    </label>
+                </div>
+                
+                <div class="input-row">
+                    
+                    <div class="form-check-inline">
+                         
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" id="knows-weight" name="knowsWeight" value="1" checked> Yes, I can provide
+                        </label>
+                    </div>
+                    <div class="form-check-inline">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" id="dont-know-weight" name="knowsWeight" value="2"> No, I need help
+                        </label>
+                    </div>
+
+                </div>
+                <div class="input-row">
+                    <div class="form-check-inline">
+
+                        <div id="optionButtons2" class="options" style="display: none;">
+                            <form action="{% url 'external' %}" method="post">
+
+                            <button class="bn632-hover bn27" type="button" onclick="chatBotClick()">Talk to EZBot</button>
+
+                                {% csrf_token %}
+                                <button class="bn632-hover bn21 modal-open" data-id="aruco-modal" type="submit" id="script">Camera Measure</button>
+                                <!-- <label for="Width_and_Height"> {{data1}}</label> -->
+        
+                            </form>
+
+                        </div>
+                    </div>
+
+                </div>
+                <form class="search-courier-form" action="{% url 'courier' %}" onsubmit="return courier_search()">
+                    <div class="align-items-center">
+
+
+                        <div class="search-courier-form-data">
+                            
+                            <div class="input-row">
+
+                                    <label>FROM: &nbsp </label>
+                                    <select class="selectpicker countrypicker" name = "Origin" data-flag="true" data-countries="SG" value = "{{origin}}"></select>
+                                    <script>
+                                    $('.countrypicker').countrypicker();
+                                    </script>
+                            </div>
+                            <div class="input-row">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <input type="text" name="OriginPostcode" placeholder="PostCode" id="origin-postcode" class="form-control" value="{{origin_postcode}}"> 
+                                    </div>
+
+                                </div>
+                            </div> 
+
+                            <div class="input-row">
+                                    <label>TO: &nbsp &nbsp &nbsp </label>
+                                    <select id = "dest_country_picker2" class="selectpicker countrypicker" name = "Destination" value = "{{destination}}" data-flag="true"></select>                           
+                                    <script>
+                                        $('.countrypicker').countrypicker();
+                                    </script>
+                            </div> 
+                            
+                            <div class="input-row">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <input type="text" name="DestinationPostcode" placeholder="PostCode" id="destination-postcode" value="{{desination_postcode}}" class="form-control"> 
+                                    </div>
+                                </div>
+                            </div> 
+
+                            <div class="input-row">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <label for="length_class">LENGTH(CM): </label>
+                                        <input type="text" name="Length" placeholder="CM(eg:30)" id="parcel-length" class="form-control" onchange="calcTotal()" autocomplete="off"> 
+                                    </div>
+                                    
+                                    <div class="col-sm-4">
+                                        <label for="width_class">WIDTH(CM): </label>
+                                        <input type="text" name="Width" placeholder="CM(eg:20)" id="parcel-width" class="form-control" onchange="calcTotal()" autocomplete="off"> 
+                                    </div>
+                                    
+                                    <div class="col-sm-4">
+                                        <label for="height_class">HEIGHT(CM): </label>
+                                        <input type="text" name="Height" placeholder="CM(eg:30)" id="parcel-height" class="form-control" onchange="calcTotal()" autocomplete="off"> 
+                                    </div>
+                                </div>    
+                            </div>
+                            
+                            <div class="input-row">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <label for="weight_class">WEIGHT(KG): &nbsp </label>
+                                        <input type="text" name="Weight" placeholder="kg(eg:0.1)" id="parcel-weight" class="form-control" autocomplete="off"> 
+                                    </div>
+
+                                </div>    
+                            </div>
+
+                            <div class="input-row">
+                                <label for="pickup_date">PickUp Date: </label>
+                                <input type="date" name="PickUpDate" min="{{min_date}}" max="{{max_date}}" id="pickup_date" placeholder="Date" class="form-control mr-sm-2" value="{{pickUp_date}}">
+                            </div>
+                            <div class="input-row">
+                                <label for="delivery_date">Delivery Date: </label>
+                                <input type="date" name="DeliveryDate" min="{{min_date}}" max="{{max_date}}" id="delivery_date" placeholder="Date" class="form-control mr-sm-2" value="{{delivery_date}}">
+                            </div>
+
+                            <div class="input-row">
+                                <label for="category_class">Category: </label>
+                                <select name="Category" class="form-control mr-sm-2">
+                                    <option value="Files">Files</option>
+                                    <option value="Food">Food</option>
+                                    <option value="Others">Others</option>
+                                </select>
+                            </div>
+                            <div class="input-row">
+                                <label for="transportation_class">Transporation: </label>
+                                <select name="Transportation" class="form-control mr-sm-2">
+                                    <option value="Freight">Freight</option>
+                                    <option value="Air">Air</option>
+                                    <option value="Sea">Sea</option>
+                                </select>
+                            </div>
+                            
+                            <div class="input-row">
+                                <label for="priority_class">What is most important factor for you? </label>
+                                <select name="Priority" class="form-control mr-sm-2">
+                                    <option value="Price">Price</option>
+                                    <option value="Insurance">Insurance</option>
+                                    <option value="Re-Deliveryea">Re-Delivery</option>
+                                    <option value="Home Delivery">Home Delivery</option>
+                                    <option value="Delivery Date">Delivery Date</option>
+                                </select>
+                            </div>
+
+                            <div class="input-row">
+                                <button type="submit" class="btn btn-secondary">Search Couriers</button>
+                            </div>
+                        </div>
+                            
+                    </div>
+                </form>
+                
+                </div>
+
+                <div id="aruco-modal" class="modal" role="dialog" tabindex="-1">
+                    <div class="model-inner">
+                        <div class="modal-header">
+                            <h3>Camera Measure Guide</h3>
+                            <button class="modal-close" data-id="aruco-modal" aria-label="Close">
+                                &times;
+                            </button>
+                        </div>
+                        <p>
+                            1. Click on below Aruco Marker image to download the image.
+                        </p>
+                        <p>
+                            2. Print the marker image on a white sheet of paper.
+                            (Note: This image has width and height of 300px. Please print it as it is with 100% scaling to get the correct measurements.)
+                        </p>
+                        <p>
+                            3. Place the sheet of paper with the marker on a flat surface. Place the parcel package on the sheet of paper beside the marker.
+                        </p>
+                        <p>
+                            4. Position the webcam above the marker and package to measure the package dimensions.
+                        </p>
+                        <p>
+                            5. Measure the length, width and height of the package by rotating the package about its faces.
+                            (Note: The camera function works best with a white background.)
+                        </p>
+                        <p>
+                            6. Once all the package dimensions are measured, close the camera window by pressing the 'ESC' key. You can return to the webpage to key in the measured dimensions.
+                        </p>
+                        <center>
+                            <a href="{% static 'img/ArucoMarker.jpg' %}" download>
+                                <img src="{% static 'img/ArucoMarker.jpg' %}" width="300" height="300">
+                            </a>
+                        </center>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </section>
+
+{% endblock%}
