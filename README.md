@@ -29,10 +29,10 @@ We plan to address this issue by creating an intelligent reasoning system that c
 Please click on below images for the marketing & business Video 
 
 
-Business Video
-[![Busienss Video](https://github.com/SionsML/IRS-PM-2022-01-29-IS04PT-KICS-Optimum_Parcels/blob/master/Micellaneous/KICS_System_Architecture.PNG)]()
+## Technical Video
+[![Technical Video](https://github.com/SionsML/IRS-PM-2022-01-29-IS04PT-KICS-Optimum_Parcels/blob/master/Micellaneous/KICS_System_Architecture.PNG)]()
 
-Marketing Video
+## Marketing Video
 [![Marketing Video](https://github.com/SionsML/IRS-PM-2022-01-29-IS04PT-KICS-Optimum_Parcels/blob/master/Micellaneous/KICS_Marketing_Video.PNG)](https://www.youtube.com/watch?v=bjEnNhT_x2g)
 
 
