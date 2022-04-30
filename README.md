@@ -30,7 +30,7 @@ We plan to address this issue by creating a Logistic Company Recommendation Plat
 ---
 
 ## SECTION 4 : PROMOTIONAL / TECHNICAL SOLUTION VIDEO
-[![Marketing Video](https://github.com/SionsML/IRS-PM-2022-01-29-IS04PT-KICS-Optimum_Parcels/blob/master/Micellaneous/KICS Marketing Video.PNG)](https://www.youtube.com/watch?v=bjEnNhT_x2g)
+[![Marketing Video](https://github.com/SionsML/IRS-PM-2022-01-29-IS04PT-KICS-Optimum_Parcels/blob/master/Micellaneous/KICS_Marketing_Video.PNG)](https://www.youtube.com/watch?v=bjEnNhT_x2g)
 [![Busienss Video]()]()
 
 
