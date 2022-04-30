@@ -44,6 +44,6 @@ Please refer to [Installation & User Guide](https://github.com/SionsML/IRS-PM-20
 ---
 
 ## SECTION 6 : PROJECT REPORT 
-Please refer to [Project Report](https://github.com/SionsML/IRS-PM-2022-01-29-IS04PT-KICS-Optimum_Parcels/blob/master/ProjectReport/Project%20Report_Team%20KICS.pdf)
+Please refer to [Project Report](https://github.com/SionsML/IRS-PM-2022-01-29-IS04PT-KICS-Optimum_Parcels/blob/master/ProjectReport/Project%20Report_Team_KICS.pdf)
 
 ---
