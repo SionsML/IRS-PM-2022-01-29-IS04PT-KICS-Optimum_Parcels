@@ -18,10 +18,7 @@ We plan to address this issue by creating an intelligent reasoning system that c
 | Official Full Name | Student ID (MTech Applicable) | Work Items (Who Did What)                                    | Email (Optional)      |
 | :----------------- | :---------------------------: | :----------------------------------------------------------- | :-------------------- |
 | Hwang Sion         |           A0249263Y           | Market research for available feature services for different couriers. Front & Backend build and integration with Camera, Business rule Engine, and Chatbot. Installation and User guide creation. |  e0938868@u.nus.edu   |
-| Li Danyang         |           A0176203M           | On-site market research. Logistics Customer Behavior Study survey creation and analysis. 
-Project proposal and group project draft writing.  Website front-end development. 
-Camera utility exploration and embed with button click. Architecture diagram drawing. 
-Made the business/marketing video using Animaker.                                                             |  e0224941@u.nus.edu   |
+| Li Danyang         |           A0176203M           | On-site market research. Logistics Customer Behavior Study survey creation and analysis. Project proposal and group project draft writing.  Website front-end development. Camera utility exploration and embed with button click. Architecture diagram drawing. Made the business/marketing video using Animaker. |  e0224941@u.nus.edu   |
 | Muniyandi Vanitha  |           A0249302L    		 | Initial Market analysis, Creation of Knowledge base(ChatBot) , Creation of Business /Marketing video using Animaker, UAT and Report & Proposal Writing |  e0938907@u.nus.edu   |
 | Prerak Agarwal     |           A0116711R           | Created rules engine for courier service recommendation. Explored APIs from courier service providers. Worked on camera utility function to help users determine dimensions of parcel packages. Explored ways to serve final project as Docker image.|  e0938637@u.nus.edu   |
 | Zhang Junfeng      |           A0249266U           |                                                              |  junfeng@u.nus.edu    |
@@ -42,7 +39,7 @@ Marketing Video
 ---
 
 ## SECTION 5 : Installation & USER GUIDE 
-Please refer to [Installation & User Guide](Link to github)
+Please refer to [Installation & User Guide](https://github.com/SionsML/IRS-PM-2022-01-29-IS04PT-KICS-Optimum_Parcels/blob/master/ProjectReport/Installation%20%26%20User%20Guide_Team%20KICS.docx)
 
 ---
 
