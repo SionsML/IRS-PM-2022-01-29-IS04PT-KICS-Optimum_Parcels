@@ -1,7 +1,7 @@
 ## SECTION 1 : PROJECT TITLE
 
 ## OPTIMUM PARCELS
-
+[![Front Page](https://github.com/SionsML/IRS-PM-2022-01-29-IS04PT-KICS-Optimum_Parcels/blob/master/Micellaneous/KICS_Front_Page.PNG)]
 ---
 
 ## SECTION 2 : EXECUTIVE SUMMARY
@@ -21,7 +21,7 @@ We plan to address this issue by creating a Logistic Company Recommendation Plat
 
 | Official Full Name | Student ID (MTech Applicable) | Work Items (Who Did What)                                    | Email (Optional)      |
 | :----------------- | :---------------------------: | :----------------------------------------------------------- | :-------------------- |
-| Hwang Sion         |           A0249263Y           |                                                              |  e0938868@u.nus.edu   |
+| Hwang Sion         |           A0249263Y           | Market research for available feature services for different couriers. Front & Backend build and integration with Camera, Business rule Engine, and Chatbot. Installation and User guide creation. |  e0938868@u.nus.edu   |
 | Li Danyang         |           A0176203M           |                                                              |  e0224941@u.nus.edu   |
 | Muniyandi Vanitha  |           A0249302L    		 | Initial Market analysis, Creation of Knowledge base(ChatBot) , Creation of Business /Marketing video using Animaker, UAT and Report & Proposal Writing |  e0938907@u.nus.edu   |
 | Prerak Agarwal     |           A0116711R           |                                                              |  e0938637@u.nus.edu   |
@@ -30,8 +30,14 @@ We plan to address this issue by creating a Logistic Company Recommendation Plat
 ---
 
 ## SECTION 4 : PROMOTIONAL / TECHNICAL SOLUTION VIDEO
+Please click on below images for the marketing & business Video 
+
+
+Business Video
+[![Busienss Video](https://github.com/SionsML/IRS-PM-2022-01-29-IS04PT-KICS-Optimum_Parcels/blob/master/Micellaneous/KICS_System_Architecture.PNG)]()
+
+Marketing Video
 [![Marketing Video](https://github.com/SionsML/IRS-PM-2022-01-29-IS04PT-KICS-Optimum_Parcels/blob/master/Micellaneous/KICS_Marketing_Video.PNG)](https://www.youtube.com/watch?v=bjEnNhT_x2g)
-[![Busienss Video]()]()
 
 
 ---
