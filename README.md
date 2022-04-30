@@ -21,7 +21,7 @@ We plan to address this issue by creating an intelligent reasoning system that c
 | Li Danyang         |           A0176203M           | On-site market research. Logistics Customer Behavior Study survey creation and analysis. Project proposal and group project draft writing.  Website front-end development. Camera utility exploration and embed with button click. Architecture diagram drawing. Made the business/marketing video using Animaker. |  e0224941@u.nus.edu   |
 | Muniyandi Vanitha  |           A0249302L    		 | Initial Market analysis, Creation of Knowledge base(ChatBot) , Creation of Business /Marketing video using Animaker, UAT and Report & Proposal Writing |  e0938907@u.nus.edu   |
 | Prerak Agarwal     |           A0116711R           | Created rules engine for courier service recommendation. Explored APIs from courier service providers. Worked on camera utility function to help users determine dimensions of parcel packages. Explored ways to serve final project as Docker image.|  e0938637@u.nus.edu   |
-| Zhang Junfeng      |           A0249266U           |                                                              |  junfeng@u.nus.edu    |
+| Zhang Junfeng      |           A0249266U           | Solution design; Chatbot design and build including custom fufilment functions, project  management, documentation, system architecture video.   |  junfeng@u.nus.edu    |
 
 ---
 
