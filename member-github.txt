@@ -1,0 +1,6 @@
+Team KICS
+| Hwang Sion         |           A0249263Y           |
+| Li Danyang         |           A0176203M           | 
+| Muniyandi Vanitha  |           A0249302L           | 
+| Zhang Junfeng      |           A0249266U           |
+https://github.com/SionsML/IRS-PM-2022-01-29-IS04PT-KICS-Optimum_Parcels
