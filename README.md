@@ -1,7 +1,7 @@
 ## SECTION 1 : PROJECT TITLE
 
-## OPTIMUM PARCELS
-![Front Page](https://github.com/SionsML/IRS-PM-2022-01-29-IS04PT-KICS-Optimum_Parcels/blob/master/Micellaneous/KICS_Front_Page.PNG)
+## OPTIMUM PARCELS - Intelligent Courier Recommender System
+![Front Page](https://github.com/SionsML/IRS-PM-2022-01-29-IS04PT-KICS-Optimum_Parcels/blob/master/Micellaneous/Cover.jpg)
 ---
 
 ## SECTION 2 : EXECUTIVE SUMMARY
