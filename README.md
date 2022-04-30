@@ -1,20 +1,16 @@
 ## SECTION 1 : PROJECT TITLE
 
 ## OPTIMUM PARCELS
-[![Front Page](https://github.com/SionsML/IRS-PM-2022-01-29-IS04PT-KICS-Optimum_Parcels/blob/master/Micellaneous/KICS_Front_Page.PNG)]
+![Front Page](https://github.com/SionsML/IRS-PM-2022-01-29-IS04PT-KICS-Optimum_Parcels/blob/master/Micellaneous/KICS_Front_Page.PNG)
 ---
 
 ## SECTION 2 : EXECUTIVE SUMMARY
 ---
-Today, demand for courier services has risen significantly because of the threat of the COVID-19 pandemic. Community Quarantines, Work from home and online classes due to COVID-19 have pushed people all over the world to resort to the use of courier services to buy their needs and essentials. Courier services plays an immense role in offering a safe yet convenient method for acquiring necessities and wants during the pandemic. Logistics firms, which are involved in the movement, storage, and flow of goods, have been directly affected by the COVID-19 pandemic. 
+Over the last two years, the demand for courier services has risen significantly because of the threat of the Covid-19 pandemic. Community quarantines, work from home and online classes due to the pandemic have pushed people all over the world to resort to the use of courier services to buy their needs and essentials. Courier services play an immense role in offering a safe yet convenient method for acquiring necessities and wants during the pandemic. And this fluctuation of the pandemic and the way it influences our shopping habits will likely continue in the foreseeable future. Unpredictable spikes in virus cases in certain geographies may temporarily accelerate online orders and the need for home delivery from time-to-time.
 
-The fluctuation of the COVID-19 pandemic and the ways it influences our shopping habits will likely continue into the foreseeable future. Spikes in virus cases in certain geographies may temporarily accelerate online orders and the need for home delivery. 
+For consumers who wish to send and receive parcels, it can be quite challenging and confusing to decide which shipping company to select that would suit their specific needs and requirements. As the competition in this industry heats up, we notice an almost daily increase in the number of logistics companies available for consumers to choose from. This further adds to the consumers’ confusion and makes the process of selecting the most suitable shipping service very time-consuming and complicated.
 
-Logistics can be a pain point for many small businesses, and it can be challenging to decide which shipping company would best suit their business needs. There is a wide array of genuinely good choices as competition keeps increasing daily in the logistics industry. Therefore, 3PL's (Third Party Logistics) providers must be chosen wisely, considering that it has a direct impact on the Cost of goods sold, and thereby on Gross Profit, in addition to customers experience.
-
-Before selecting the shipping company, it is essential to know the volume of your shipments and where you ship to. This can significantly impact your choice, choosing between a delivery company that is more locally focused (national) to something more widespread, even global (international).
-
-We plan to address this issue by creating a Logistic Company Recommendation Platform, which will be comparing the shipping companies and the services they offer to help customers decide the best shipping option suited to their needs. The main factor that people always consider in choosing a courier service is the cost involved, and a more economical service is the preferred delivery option of the customers. 
+We plan to address this issue by creating an intelligent reasoning system that can ease these pain-points for consumers. Our system would help the users determine the weight and dimensions of their package in a simple manner, and then provide them with an interface to compare the shipping services best suited to their needs. The system would also consider some user preferences inputs, such as cost or time sensitivity, to accordingly recommend services that are the most economical or the fastest.
 
 
 ## SECTION 3 : CREDITS / PROJECT CONTRIBUTION
