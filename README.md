@@ -23,13 +23,15 @@ We plan to address this issue by creating a Logistic Company Recommendation Plat
 | :----------------- | :---------------------------: | :----------------------------------------------------------- | :-------------------- |
 | Hwang Sion         |           A0249263Y           |                                                              |  e0938868@u.nus.edu   |
 | Li Danyang         |           A0176203M           |                                                              |  e0224941@u.nus.edu   |
-| Muniyandi Vanitha  |                               |                                                              |  e0938907@u.nus.edu   |
+| Muniyandi Vanitha  |           A0249302L    		 | Initial Market analysis, Creation of Knowledge base(ChatBot) , Creation of Business /Marketing video using Animaker, UAT and Report & Proposal Writing |  e0938907@u.nus.edu   |
 | Prerak Agarwal     |           A0116711R           |                                                              |  e0938637@u.nus.edu   |
-| Zhang Junfeng      |                               |                                                              |  junfeng@u.nus.edu    |
+| Zhang Junfeng      |           A0249266U           |                                                              |  junfeng@u.nus.edu    |
 
 ---
 
 ## SECTION 4 : PROMOTIONAL / TECHNICAL SOLUTION VIDEO
+[![Marketing Video]()](https://www.youtube.com/watch?v=bjEnNhT_x2g)
+[![Busienss Video]()]()
 
 
 ---
