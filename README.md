@@ -30,7 +30,7 @@ Please click on below images for the marketing & business Video
 
 
 ## Technical Video
-[![Technical Video](https://github.com/SionsML/IRS-PM-2022-01-29-IS04PT-KICS-Optimum_Parcels/blob/master/Micellaneous/KICS_System_Architecture.PNG)]()
+[![Technical Video](https://github.com/SionsML/IRS-PM-2022-01-29-IS04PT-KICS-Optimum_Parcels/blob/master/Micellaneous/KICS_System_Architecture.PNG)](https://youtu.be/HOVi5_tQVek)
 
 ## Marketing Video
 [![Marketing Video](https://github.com/SionsML/IRS-PM-2022-01-29-IS04PT-KICS-Optimum_Parcels/blob/master/Micellaneous/KICS_Marketing_Video.PNG)](https://www.youtube.com/watch?v=bjEnNhT_x2g)
